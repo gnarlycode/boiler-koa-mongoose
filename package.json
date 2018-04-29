@@ -1,0 +1,46 @@
+{
+  "name": "@gnarlycode/boiler-koa-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild-ts": "npm run clean",
+    "prewatch-ts": "npm run clean",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "serve": "node build/index.js",
+    "serve-dev": "nodemon --inspect build/index.js",
+    "start": "npm run build-ts && npm run serve",
+    "start:prod": "pm2 start pm2.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "chalk": "^2.4.1",
+    "dotenv": "^5.0.1",
+    "dotenv-expand": "^4.2.0",
+    "jsonwebtoken": "^8.2.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-jwt": "^3.3.1",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.16"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
+    "@types/jsonwebtoken": "^7.2.6",
+    "@types/koa": "^2.0.45",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-multer": "^1.0.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/mongoose": "^5.0.10",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.3"
+  }
+}
