@@ -1,8 +1,8 @@
-import './utils/load-env'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import mongoose from 'mongoose'
 import chalk from 'chalk'
+require('dotenv').config()
 import { router } from './routes'
 import { addDocsField } from './middlewares/document'
 import { jwtMiddleware } from './middlewares/jwt'

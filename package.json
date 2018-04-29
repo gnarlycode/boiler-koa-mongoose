@@ -20,7 +20,6 @@
     "bcrypt": "^2.0.1",
     "chalk": "^2.4.1",
     "dotenv": "^5.0.1",
-    "dotenv-expand": "^4.2.0",
     "jsonwebtoken": "^8.2.1",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.0",
