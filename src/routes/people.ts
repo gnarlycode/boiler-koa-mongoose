@@ -51,7 +51,7 @@ router.get('/', async ctx => {
 router.post('/', async ctx => {
   const { body } = ctx.request
   body.password = await bcrypt.hash(body.password, 10)
-  const person = new Person(ctx.request.body)
+  const person = new Person(body)
   await person.save()
   ctx.state.res = personWithToken(person)
 })
